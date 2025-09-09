@@ -1,0 +1,21 @@
+
+<div class="container">
+  <div class="header">
+    <h1>{{ title }}</h1>
+  </div>
+
+  <div class="card">
+    <h2>Course List</h2>
+    <!-- Event Binding: (courseSelected) from CourseListComponent updates selectedCourse -->
+    <app-course-list
+      [courses]="courses"
+      (courseSelected)="onCourseSelected($event)">
+    </app-course-list>
+  </div>
+
+  <div class="card">
+    <h2>Course Details</h2>
+    <!-- Property Binding: selectedCourse passed into CourseDetailComponent -->
+    <app-course-detail [course]="selectedCourse"></app-course-detail>
+  </div>
+</div>

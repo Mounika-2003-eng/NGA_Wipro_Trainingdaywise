@@ -1,0 +1,12 @@
+
+<ul class="list">
+  <li *ngFor="let course of courses">
+    <div>
+      <strong>{{ course.title }}</strong>
+      <div class="muted">by {{ course.author }}</div>
+    </div>
+    <div>
+      <button class="button" (click)="selectCourse(course)">View Details</button>
+    </div>
+  </li>
+</ul>

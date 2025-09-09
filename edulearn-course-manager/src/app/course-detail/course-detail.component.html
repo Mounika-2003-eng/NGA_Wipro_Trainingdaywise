@@ -1,0 +1,23 @@
+
+<div *ngIf="course; else noneSelected">
+  <!-- Two-Way Binding: editing course.title updates both the detail and the list because it's the same object reference -->
+  <label class="muted">Course Title</label>
+  <input type="text" [(ngModel)]="course!.title" placeholder="Enter title" />
+
+  <label class="muted" style="margin-top:.5rem; display:block;">Author</label>
+  <input type="text" [(ngModel)]="course!.author" placeholder="Enter author" />
+
+  <label class="muted" style="margin-top:.5rem; display:block;">Description</label>
+  <textarea rows="4" [(ngModel)]="course!.description" placeholder="Enter description"></textarea>
+
+  <div style="margin-top: .75rem;">
+    <div><strong>Preview:</strong></div>
+    <div>Title: {{ course!.title }}</div>
+    <div>Author: {{ course!.author }}</div>
+    <div>Description: {{ course!.description }}</div>
+  </div>
+</div>
+
+<ng-template #noneSelected>
+  <p class="muted">Select a course from the list to view/edit its details.</p>
+</ng-template>

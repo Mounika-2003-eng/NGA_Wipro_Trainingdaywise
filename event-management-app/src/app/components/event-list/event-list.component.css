@@ -1,0 +1,7 @@
+ .title{margin:12px 0 8px 4px}
+.events{width:100%;border-collapse:collapse;box-shadow:0 10px 25px rgba(0,0,0,.06);animation:fadeIn 500ms ease-in}
+.events th,.events td{padding:12px;border-bottom:1px solid #ececec;text-align:left}
+.events thead{background:#f1f5ff}
+.row:hover{transform:scale(1.01);transition:transform .2s ease}
+.name{font-weight:600}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
